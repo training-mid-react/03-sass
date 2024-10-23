@@ -1,0 +1,57 @@
+@use 'shared' as shared;
+
+.navigation {
+    background-color: shared.$COLOR-BG-MAIN;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+
+    &__wrapper {
+        @include shared.container;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-block: 10px;
+        padding-inline: 10px;
+    }
+
+    &__icon-wrapper {
+        border-radius: 5px;
+        display: flex;
+        align-items: baseline;
+    }
+
+    &__icon {
+        width: 1.8em;
+        height: 1.8em;
+        vertical-align: 1.8em;
+    }
+
+    &__list {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 30px
+    }
+
+    &__item {
+        font-size: 18px;
+
+        &--active {
+            font-weight: bold;
+        }
+    }
+}
+
+.text--navbar-icon {
+    font-size: 40px;
+    color: shared.$COLOR-TEXT-GRAY;
+    font-weight: 500;
+}
+
+.text--navbar {
+    font-size: 20px;
+    color: shared.$COLOR-TEXT-GRAY;
+    font-weight: 500;
+}

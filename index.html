@@ -1,111 +1,207 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Metatags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Encuentra los mejores libros y recomendaciones en nuestra tienda">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="Books, Libros, Comprar Libros, Novelas, Drama, Terror">
+
+    <meta name="author" content="UBooks">
+    <meta name="copyright" content="2024 Ubooks. Todos los derechos reservados">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Encuentra tus libros favoritos!">
+    <meta property="og:description" content="Encuentra y compra tu libro favorito">
+    <meta property=”og:image” content=”wwww.ubooks.com/public/img/banner-ubook” />
+
+    <!--Internacionalizacion www.ubooks.com  -->
+    <link rel="canonical" href="wwww.ubooks.com">
+    <link rel="alternate" href="wwww.ubooks.com/es" hreflang="es">
+    <link rel="alternate" href="wwww.ubooks.com/en" hreflang="en">
+
+    <!-- Links for public resoruce -->
+    <!-- <link rel="stylesheet" href="./styles/main-styles.css"> -->
     <link rel="stylesheet" href="./assets/styles/index.scss">
-  </head>
-  <body>
-    <!-- BLOQUE/BLOCK -->
-    <header class="header">
-      <div class="header__wrapper">
-        <h2 class="header__logo">Logo</h2>
-  
-        <nav class="header__nav">
-          <ul class="header__list">
-            <li class="header__item header__item--active">Home</li>
-            <li class="header__item">Section</li>
-            <li class="header__item">Section</li>
-            <li class="header__item">Section</li>
-            <li class="header__item">Section</li>
-          </ul>
+
+    <title>YouBooks</title>
+</head>
+
+<body>
+
+    <!-- Encabezado | Cabecera -->
+    <header>
+
+        <!-- Navbar -->
+        <nav class="navigation" aria-describedby="Menu de navegacion" aria-label="Barra de navegacion">
+            <div class="navigation__wrapper">
+                <a class="link--no-underline" href="/" aria-label="Logo de Ubook">
+                    <div class="navigation__icon-wrapper">
+                        <img class="navigation__icon" src="./public/icons/book-solid.svg"
+                            alt="Imagen del logo del sitio www.ubook.com">
+                        <span class="text--navbar-icon">U</span>
+                        <span class="text--navbar">Book</span>
+                    </div>
+                </a>
+                <ul class="navigation__list">
+                    <li class="navigation__item  navigation__item--active" aria-label="Opcion Catalogo" tabindex="0">
+                        <a class="link--no-underline" href="#catalogo">Catálogo</a>
+                    </li>
+                    <li class="navigation__item" aria-label="Opcion Novedades" tabindex="0">
+                        <a class="link--no-underline" href="#novedades">Novedades</a>
+                    </li>
+                    <li class="navigation__item" aria-label="Opcion Contacto" tabindex="0">
+                        <a class="link--no-underline" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
-      </div>
-    </header>
-  
-    <main>
-      <section class="banner" role="banner">
-        <article>
-          <h1 class="banner__title">Bienvenido a esta clase de CSS</h1>
-          <p class="banner__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quisquam, voluptas libero tempore obcaecati possimus architecto labore consequuntur praesentium ipsa iure tempora fugiat, ea sapiente? Autem ipsam quibusdam odio provident.</p>
-          <button class="banner__button">Comenzar</button>
+
+
+        <article class="banner" role="banner">
+            <section class="banner__description">
+                <h1 class="banner__title">
+                    ¡Bienvenido a Ubook! Encuentra tu próxima aventura literaria aquí
+                </h1>
+                <p class="banner__message">
+                    Desde ficción hasta no ficción, aquí hay un libro para cada lector. ¡Comienza tu viaje literario
+                    hoy!
+                </p>
+
+                <p class="banner__message">
+                    ¿No sabes qué leer? Déjanos ayudarte a encontrar el libro perfecto para
+                    ti.
+                </p>
+
+                <a class="banner__button link--no-underline" href="#catalogo" aria-label="Boton para ver el catalogo">
+                    Ver catálogo
+                </a>
+            </section>
+            <div class="banner__ilustration"></div>
         </article>
-  
-        <figure class="banner__figure">
-          <img class="banner__image" src="./banner-img.webp" alt="Carretera nevada con postes de energia y personas caminando">
-        </figure>
-      </section>
-  
-      <section class="products">
-        <h2 class="products__title">Products</h2>
-  
-        <div class="products__container">
-          <article class="product">
-            <header>
-              <figure class="product__figure">
-                <img class="product__image" src="./banner-img.webp" alt="Carretera nevada con postes de energia y personas caminando">
-              </figure>
-            </header>
-            <main>
-              <h3 class="product__title">CSS</h3>
-              <p class="product__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, deleniti odit natus incidunt maxime laborum praesentium laudantium eaque facilis, vitae voluptas expedita numquam, iste eius fugiat. Sequi fuga quisquam officiis.</p>
-            </main>
-            <footer>
-              <button class="product__button">Comprar</button>
-            </footer>
-          </article>
-  
-          <article class="product">
-            <header>
-              <figure class="product__figure">
-                <img class="product__image" src="./banner-img.webp" alt="Carretera nevada con postes de energia y personas caminando">
-              </figure>
-            </header>
-            <main>
-              <h3 class="product__title">CSS</h3>
-              <p class="product__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, deleniti odit natus incidunt maxime laborum praesentium laudantium eaque facilis, vitae voluptas expedita numquam, iste eius fugiat. Sequi fuga quisquam officiis.</p>
-            </main>
-            <footer>
-              <button class="product__button">Comprar</button>
-            </footer>
-          </article>
-  
-          <article class="product">
-            <header>
-              <figure class="product__figure">
-                <img class="product__image" src="./banner-img.webp" alt="Carretera nevada con postes de energia y personas caminando">
-              </figure>
-            </header>
-            <main>
-              <h3 class="product__title">CSS</h3>
-              <p class="product__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, deleniti odit natus incidunt maxime laborum praesentium laudantium eaque facilis, vitae voluptas expedita numquam, iste eius fugiat. Sequi fuga quisquam officiis.</p>
-            </main>
-            <footer>
-              <button class="product__button">Comprar</button>
-            </footer>
-          </article>
-  
-          <article class="product">
-            <header>
-              <figure class="product__figure">
-                <img class="product__image" src="./banner-img.webp" alt="Carretera nevada con postes de energia y personas caminando">
-              </figure>
-            </header>
-            <main>
-              <h3 class="product__title">CSS</h3>
-              <p class="product__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, deleniti odit natus incidunt maxime laborum praesentium laudantium eaque facilis, vitae voluptas expedita numquam, iste eius fugiat. Sequi fuga quisquam officiis.</p>
-            </main>
-            <footer>
-              <button class="product__button">Comprar</button>
-            </footer>
-          </article>
-        </div>
-      </section>
+
+    </header>
+
+    <!-- Contenido principal  -->
+    <main>
+
+        <!-- Catalogo -->
+        <section id="catalogo" class="catalogo">
+            <h2 class="text--section catalogo__title">Catálogo de libros</h2>
+
+            <div class="carousel" aria-label="Carrusel con el catalogo de los libros">
+                <button class="carousel__button carousel__button--left" onclick="moveSlide(-1)"
+                    aria-label="Boton izquierdo del carrusel">&#10094;</button>
+                <div class="carousel__slides">
+                    <article class="carousel__slide active"
+                        aria-details="Portada del libro Bajo la misma estrella con breve descripcion">
+                        <img class="carousel__image" src="public/img/book-bajo-la-misma-estrella.webp" alt="Imagen 1">
+                        <div>
+                            <h3 class="carousel__title">Bajo la misma estrella</h3>
+                            <p class="carousel__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Voluptatem magni doloremque ut vero. Expedita, tempore?.</p>
+                            <button class="carousel__button-action">Leer más</button>
+                        </div>
+                    </article>
+
+                    <article class="carousel__slide"
+                        aria-details="Portada del libro Las vidas dentro de tu cabeza con breve descripcion">
+                        <img class="carousel__image" src="public/img/book-las-vidas-dentro-de-tu-cabeza.webp"
+                            alt="Imagen 2">
+                        <div>
+                            <h3 class="carousel__title">Las vidas dentro de tu cabeza</h3>
+                            <p class="carousel__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                Laudantium totam fugiat provident veritatis quo doloribus repellat facere nam earum
+                                dignissimos, enim itaque excepturi magnam, explicabo laboriosam cum, tempore minima.
+                                Iure</p>
+                            <button class="carousel__button-action">Leer más</button>
+                        </div>
+                    </article>
+
+                    <article class="carousel__slide"
+                        aria-details="Portada del libro Los Reyes Caido con breve descripcion">
+                        <img class="carousel__image" src="public/img/book-reyes-caidos.webp" alt="Imagen 3">
+                        <div>
+                            <h3 class="carousel__title">Reyes caidos</h3>
+                            <p class="carousel__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Ullam, earum?</p>
+                            <button class="carousel__button-action">Leer más</button>
+                        </div>
+                    </article>
+                </div>
+                <button class="carousel__button carousel__button--right" aria-label="Boton derecho del carrusel"
+                    onclick="moveSlide(1)">&#10095;</button>
+            </div>
+        </section>
+
+        <!-- Novedades -->
+        <section id="novedades" class="novedades" aria-labelledby="novedades-title">
+            <h2 class="text--section novedades__title">Novedades</h2>
+
+            <div class="novedades__wrapper">
+
+                <article class="novedades__item" aria-labelledby="novedades-Amor en tiempos de colera">
+                    <img src="./public/img/book-amor-en-tiempos-colera.jpg"
+                        alt="Portada del libro 'Amor en tiempos de cólera'" class="novedades__image">
+                    <h3 id="novedad-1-title" class="novedades__item-title">Amor en tiempos de cólera</h3>
+                    <p class="novedades__item-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                    <a href="#" class="novedades__item-link">Ver más</a>
+                </article>
+
+                <article class="novedades__item" aria-labelledby="novedad-2-Las vidas dentro de tu cabeza">
+                    <img src="./public/img/book-las-vidas-dentro-de-tu-cabeza.webp"
+                        alt="Portada del libro 'Las vidas dentro de tu cabeza'" class="novedades__image">
+                    <h3 id="novedad-1-title" class="novedades__item-title">Las vidas dentro de tu cabeza</h3>
+                    <p class="novedades__item-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Corporis ducimus doloremque enim, veritatis quisquam cum.</p>
+                    <a href="#" class="novedades__item-link">Ver más</a>
+                </article>
+
+                <article class="novedades__item" aria-labelledby="novedad-3-Debajo de la misma estrella">
+                    <img src="./public/img/book-bajo-la-misma-estrella.webp"
+                        alt="Portada del libro 'Amor en tiempos de cólera'" class="novedades__image">
+                    <h3 id="novedad-1-title" class="novedades__item-title">Debajo de la misma estrella</h3>
+                    <p class="novedades__item-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Accusamus, dignissimos.
+                    </p>
+                    <a href="#" class="novedades__item-link">Ver más</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- Contacto -->
+        <section id="contacto" class="contacto" aria-labelledby="contacto-title">
+            <h2 id="contacto-title" class="contacto__title">Contacto</h2>
+            <p class="contacto__description">Si tienes preguntas o sugerencias, contáctanos!</p>
+            <form action="#" method="POST" class="contacto__form">
+                <fieldset class="contacto__fieldset">
+                    <label for="nombre" class="contacto__label">Nombre</label>
+                    <input aria-label="input-nombre" aria-required="true" type="text" id="nombre" name="nombre"
+                        class="contacto__input" placeholder="Juan" required>
+
+                    <label for="email" class="contacto__label">Email</label>
+                    <input aria-label="input-email" aria-required="true" type="email" id="email" name="email"
+                        class="contacto__input" placeholder="Perez" required>
+
+                    <label for="mensaje" class="contacto__label">Mensaje</label>
+                    <textarea aria-label="input-mensaje" aria-required="true" id="mensaje" name="mensaje"
+                        class="contacto__textarea" rows="4" placeholder="Mensaje..." required></textarea>
+                </fieldset>
+                <button type="submit" class="contacto__submit">Enviar</button>
+            </form>
+        </section>
+
     </main>
-  
-    <footer>
+
+    <!-- Pie de pagina -->
+    <footer class="footer" aria-label="Pie de página">
+        <p class="footer__text">© 2024 Ubooks. Todos los derechos reservados.</p>
     </footer>
-  </body>
+
+    <!-- scripts -->
+    <script src="./js/main-script.js"></script>
+</body>
+
 </html>

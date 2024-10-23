@@ -1,0 +1,71 @@
+@use 'shared' as shared;
+
+.banner {
+    @include shared.container;
+
+    margin-top: 73px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center center;
+
+    @media(width <=700px) {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    &__ilustration {
+        background-image: url('../../public/img/books-banner.webp');
+        object-fit: cover;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: calc(100dvh - 73px);
+        width: 100%;
+
+        @media(width <=700px) {
+            display: none;
+        }
+
+    }
+
+    &__description {
+        display: flex;
+        justify-content: space-center;
+        place-content: center;
+        flex-direction: column;
+        margin: 0 auto;
+        height: 100%;
+        padding-inline: 20px;
+    }
+
+    &__title {
+        font-size: 40px;
+        text-align: left;
+        color: #030303;
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+
+    &__message {
+        font-size: 15px;
+        font-weight: 200;
+        align-self: flex-start;
+        margin-bottom: 30px;
+    }
+
+    &__button {
+        align-self: self-start;
+        padding: 5px;
+        border: 3px solid rgb(13, 32, 26);
+        border-radius: 5px;
+        background-color: shared.$COLOR-BUTTON-PRIMARY;
+        color: #f3eeee;
+        gap: 40px;
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+
+    &__button:hover {
+        background-color: shared.$COLOR-BUTTON-PRIMARY-HOVER;
+    }
+}

@@ -1,0 +1,443 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: rgb(243, 243, 243);
+    ;
+}
+
+
+/*
+---------------------------------------------
+-       General styles 
+--------------------------------------------- 
+*/
+
+.link--no-underline {
+    text-decoration: none;
+}
+
+.text--section {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+/*
+---------------------------------------------
+-       Navbar 
+--------------------------------------------- 
+*/
+.navigation {
+    background-color: rgb(188, 242, 26);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navigation_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1366px;
+    margin: 0 auto;
+    padding-block: 10px;
+    padding-inline: 10px;
+}
+
+.text--navbar-icon {
+    font-size: 40px;
+    color: rgb(150, 150, 150);
+    font-weight: 500;
+}
+
+.text--navbar {
+    font-size: 20px;
+    color: #969696;
+    font-weight: 500;
+}
+
+.navigation__icon-wrapper {
+    border-radius: 5px;
+    display: flex;
+    align-items: baseline;
+}
+
+.navigation__icon {
+    width: 1.8em;
+    height: 1.8em;
+    vertical-align: 1.8em;
+}
+
+.navigation__list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 30px
+}
+
+.navigation__item {
+    font-size: 18px;
+}
+
+.navigation__item--active {
+    font-weight: bold;
+}
+
+
+/*
+---------------------------------------------
+-       Banner 
+--------------------------------------------- 
+*/
+.banner {
+    margin-top: 73px;
+    max-width: 1366px;
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center center;
+}
+
+.banner__ilustration {
+    background-image: url('../public/img/books-banner.webp');
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: calc(100dvh - 73px);
+    width: 100%;
+}
+
+.banner__description {
+    display: flex;
+    justify-content: space-center;
+    flex-direction: column;
+    margin: 0 auto;
+    height: 100%;
+    padding-inline: 20px;
+}
+
+.banner__title {
+    font-size: 40px;
+    text-align: left;
+    color: #030303;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.banner__message {
+    font-size: 15px;
+    font-weight: 200;
+    align-self: flex-start;
+    margin-bottom: 30px;
+}
+
+.banner__button {
+    align-self: self-start;
+    padding: 5px;
+    border: 3px solid rgb(13, 32, 26);
+    border-radius: 5px;
+    background-color: #222222;
+    color: #f3eeee;
+    gap: 40px;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.banner__button:hover {
+    background-color: #333333;
+}
+
+/*
+---------------------------------------------
+-       Catalogo 
+--------------------------------------------- 
+*/
+.catalogo {
+    height: 100dvh;
+    padding-top: 73px;
+    max-width: 1366px;
+    margin-inline: auto;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    place-items: center center;
+    background-image:
+        linear-gradient(to bottom, rgb(243, 243, 243) 10%,
+            rgba(199, 214, 151, 0.449) 60%,
+            rgb(101, 165, 95) 100%);
+}
+
+.catalogo__title {
+    padding-inline: 20px;
+    place-self: start;
+}
+
+.carousel {
+    position: relative;
+    width: 80%;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    background-color: rgba(243, 243, 243, 0.425);
+}
+
+.carousel__slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel__slide {
+    min-width: 100%;
+    display: flex;
+    padding-inline: 50px;
+}
+
+.carousel__image {
+    object-fit: cover;
+    padding-inline: 50px;
+}
+
+.carousel__title {
+    font-size: 1.5em;
+}
+
+.carousel__description {
+    color: #555;
+    max-width: 50%;
+    text-align: justify;
+}
+
+.carousel__button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    cursor: pointer;
+    font-size: 2em;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+.carousel__button--left {
+    z-index: 10;
+    left: 10px;
+}
+
+.carousel__button--right {
+    z-index: 10;
+    right: 10px;
+}
+
+.carousel__button--left:hover,
+.carousel__button--right:hover {
+    background-color: #666565;
+}
+
+
+.carousel__button-action {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.carousel__button-action:hover {
+    background-color: #363636;
+}
+
+/*
+---------------------------------------------
+-       Novedades 
+--------------------------------------------- 
+*/
+
+.novedades {
+    height: 100dvh;
+    padding-top: 73px;
+    max-width: 1366px;
+    margin-inline: auto;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    place-items: center center;
+    background-image:
+        linear-gradient(to bottom, rgb(243, 243, 243) 10%,
+            rgba(199, 214, 151, 0.449) 60%,
+            rgb(101, 165, 95) 100%);
+}
+
+.novedades__title {
+    padding-inline: 20px;
+    place-self: start;
+}
+
+.novedades__wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.novedades__item {
+    background-color: #dddddd;
+    border-radius: 8px;
+    transition: transform 0.3s;
+    padding: 30px;
+    box-shadow: 11px 1px 19px -3px rgba(0, 0, 0, 0.75);
+    aspect-ratio: 1 / 1;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+    width: 300px;
+}
+
+.novedades__item:hover {
+    transform: translateY(-5px);
+}
+
+.novedades__image {
+    object-fit: scale-down;
+    max-width: 100%;
+    height: 30%;
+    border-radius: 8px;
+}
+
+.novedades__item-title {
+    font-size: 1em;
+    margin: 10px 0;
+    color: #222;
+}
+
+.novedades__item-description {
+    font-size: 0.8em;
+    color: #444;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.novedades__item-link {
+    margin-top: auto;
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #222222;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    align-self: flex-end;
+    align-content: end;
+}
+
+.novedades__item-link:hover {
+    background-color: #333333;
+}
+
+/*
+---------------------------------------------
+-       Contacto 
+--------------------------------------------- 
+*/
+.contacto {
+    height: 100dvh;
+    padding-top: 73px;
+    max-width: 1366px;
+    margin-inline: auto;
+    display: grid;
+    grid-template-rows: auto auto;
+    place-items: center center;
+    background-image:
+        linear-gradient(to bottom, rgb(243, 243, 243) 10%,
+            rgba(199, 214, 151, 0.449) 60%,
+            rgb(101, 165, 95) 100%);
+}
+
+.contacto__title {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.contacto__description {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.contacto__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contacto__fieldset {
+    border: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.contacto__label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contacto__input,
+.contacto__textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contacto__input:focus,
+.contacto__textarea:focus {
+    border-color: #28a745;
+    outline: none;
+}
+
+.contacto__submit {
+    display: inline-block;
+    width: 50%;
+    margin-inline: auto;
+    padding: 10px 15px;
+    background-color: #222222;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contacto__submit:hover {
+    background-color: #333333;
+}
+
+
+/*
+---------------------------------------------
+-       Footer 
+--------------------------------------------- 
+*/
+
+.footer {
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    font-size: 1em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer__text {
+    margin: 0;
+}

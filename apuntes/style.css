@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.header {
+    border-bottom: 1px solid #a5a5a5;
+    position: sticky;
+    width: 100%;
+}
+
+.header__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1366px;
+    margin: 0 auto;
+    padding-block: 10px;
+}
+
+.header__logo {
+    font-size: 45px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.header__list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 30px
+}
+
+.header__item {
+    font-size: 20px;
+}
+
+.header__item--active {
+    font-weight: bold;
+}
+
+.banner {
+    max-width: 1366px;
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center center;
+    min-height: 100dvh;
+}
+
+.banner__title {
+    font-size: 70px;
+}
+
+.banner__description {
+    font-size: 20px;
+}
+
+.banner__button {
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 17px;
+}
+
+.banner__figure {
+    width: 100%;
+    height: 100%;
+}
+
+.products {
+    
+}
+.banner__image {
+    width: 100%;
+    height: 100%;
+}
+
+.products__container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
