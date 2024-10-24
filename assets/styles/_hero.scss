@@ -1,0 +1,44 @@
+@use '/assets/styles/mixins' as mixins;
+@use '/assets/styles/variables' as variables;
+
+.hero {
+  grid-column: 1 / -1;
+  padding-inline: 20px;
+  text-align: center;
+  background-color: variables.$color-purple;
+  @include mixins.center-flex;
+
+  &__content {
+    text-align: left;
+    padding-inline: 10px;
+    margin-left: 10px;
+
+    @media(width <=variables.$bkp-tablet) {
+      text-align: center;
+      padding-block: 20px;
+    }
+  }
+
+  &__title {
+    color: variables.$color-orange;
+    font-size: variables.$font-size-xlarge;
+    @include mixins.text-shadow(2px, 2px, 4px, variables.$color-shadow);
+  }
+
+  &__description {
+    color: variables.$color-text;
+    font-size: variables.$font-size-medium;
+    @include mixins.text-shadow(1px, 1px, 2px, variables.$color-shadow);
+  }
+
+  &__image {
+    @media(width <= variables.$bkp-mobile) {
+      width: 70%;
+    }
+  }
+
+  @media(width <= variables.$bkp-tablet) {
+    padding-inline: 2px;
+    @include mixins.flex-column;
+  }
+}

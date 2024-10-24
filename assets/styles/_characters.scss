@@ -1,0 +1,68 @@
+@use '/assets/styles/mixins' as mixins;
+@use '/assets/styles/variables' as variables;
+
+.characters {
+  grid-column: 1 / -1;
+  padding: 20px;
+  background-color: variables.$color-purple;
+
+  &__title {
+    color: variables.$color-orange;
+    font-size: variables.$font-size-xxlarge;
+    margin-bottom: 20px;
+    text-align: center;
+    @include mixins.text-shadow(2px, 2px, 4px, variables.$color-shadow);
+  }
+
+  &__list {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    list-style: none;
+
+    & > .characters__item {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      &:nth-child(1) {
+        grid-column: span 2;
+        grid-row: span 2;
+
+        @media (max-width: variables.$bkp-tablet) {
+          grid-column: span 1;
+          grid-row: span 1;
+        }
+      }
+    }
+  }
+
+  .character-card {
+    background: variables.$color-light-purple;
+    border-radius: 15px;
+    height: 100%;
+    padding: 20px;
+    text-align: center;
+    align-content: center;
+
+    &:hover {
+      transform: translateY(-10px);
+      @include mixins.box-shadow(0 10px 20px variables.$color-soft-shadow);
+    }
+
+    &__image {
+      margin-bottom: 15px;
+      width: 60%;
+      
+    }
+
+    &__name {
+      color: variables.$color-orange;
+      font-size: variables.$font-size-large;
+    }
+
+    &__description {
+      color: variables.$color-text;
+      font-size: variables.$font-size-small;
+      @include mixins.text-shadow(1px, 1px, 2px, variables.$color-shadow);
+    } 
+  }
+}

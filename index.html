@@ -1,111 +1,101 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conoce a los personajes gatunos más adorables en nuestra página de Halloween. Gatos con personalidades únicas, historias y más.">
+    <meta name="keywords" content="gatitos, personajes de gatos, historias de gatos, mascotas, adorables, felinos, Halloween">
+    <meta name="author" content="Tu Nombre">
+    <title>Personajes de Gatitos Adorables - Edición Halloween</title>
     <link rel="stylesheet" href="./assets/styles/index.scss">
   </head>
   <body>
-    <!-- BLOQUE/BLOCK -->
-    <header class="header">
-      <div class="header__wrapper">
-        <h2 class="header__logo">Logo</h2>
-  
-        <nav class="header__nav">
-          <ul class="header__list">
-            <li class="header__item header__item--active">Home</li>
-            <li class="header__item">Section</li>
-            <li class="header__item">Section</li>
-            <li class="header__item">Section</li>
-            <li class="header__item">Section</li>
+    <p></b>
+    <div class="page-container">
+      <header class="header" tabindex="0">
+        <img src="./assets/images/icon.webp" alt="Icono de inicio" class="nav__icon">
+        <nav class="nav" aria-labelledby="main-navigation">
+          <ul class="nav__list" role="menubar" aria-label="Navegación principal">
+            <li role="none"><a tabindex="0" href="#home" class="nav__link" role="menuitem">Inicio</a></li>
+            <li role="none"><a tabindex="0" href="#characters" class="nav__link" role="menuitem">Personajes</a></li>
+            <li role="none"><a tabindex="0" href="#contact" class="nav__link" role="menuitem">Contacto</a></li>
           </ul>
         </nav>
-      </div>
-    </header>
-  
-    <main>
-      <section class="banner" role="banner">
-        <article>
-          <h1 class="banner__title">Bienvenido a esta clase de CSS</h1>
-          <p class="banner__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quisquam, voluptas libero tempore obcaecati possimus architecto labore consequuntur praesentium ipsa iure tempora fugiat, ea sapiente? Autem ipsam quibusdam odio provident.</p>
-          <button class="banner__button">Comenzar</button>
-        </article>
-  
-        <figure class="banner__figure">
-          <img class="banner__image" src="./banner-img.webp" alt="Carretera nevada con postes de energia y personas caminando">
-        </figure>
-      </section>
-  
-      <section class="products">
-        <h2 class="products__title">Products</h2>
-  
-        <div class="products__container">
-          <article class="product">
-            <header>
-              <figure class="product__figure">
-                <img class="product__image" src="./banner-img.webp" alt="Carretera nevada con postes de energia y personas caminando">
-              </figure>
-            </header>
-            <main>
-              <h3 class="product__title">CSS</h3>
-              <p class="product__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, deleniti odit natus incidunt maxime laborum praesentium laudantium eaque facilis, vitae voluptas expedita numquam, iste eius fugiat. Sequi fuga quisquam officiis.</p>
-            </main>
-            <footer>
-              <button class="product__button">Comprar</button>
-            </footer>
-          </article>
-  
-          <article class="product">
-            <header>
-              <figure class="product__figure">
-                <img class="product__image" src="./banner-img.webp" alt="Carretera nevada con postes de energia y personas caminando">
-              </figure>
-            </header>
-            <main>
-              <h3 class="product__title">CSS</h3>
-              <p class="product__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, deleniti odit natus incidunt maxime laborum praesentium laudantium eaque facilis, vitae voluptas expedita numquam, iste eius fugiat. Sequi fuga quisquam officiis.</p>
-            </main>
-            <footer>
-              <button class="product__button">Comprar</button>
-            </footer>
-          </article>
-  
-          <article class="product">
-            <header>
-              <figure class="product__figure">
-                <img class="product__image" src="./banner-img.webp" alt="Carretera nevada con postes de energia y personas caminando">
-              </figure>
-            </header>
-            <main>
-              <h3 class="product__title">CSS</h3>
-              <p class="product__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, deleniti odit natus incidunt maxime laborum praesentium laudantium eaque facilis, vitae voluptas expedita numquam, iste eius fugiat. Sequi fuga quisquam officiis.</p>
-            </main>
-            <footer>
-              <button class="product__button">Comprar</button>
-            </footer>
-          </article>
-  
-          <article class="product">
-            <header>
-              <figure class="product__figure">
-                <img class="product__image" src="./banner-img.webp" alt="Carretera nevada con postes de energia y personas caminando">
-              </figure>
-            </header>
-            <main>
-              <h3 class="product__title">CSS</h3>
-              <p class="product__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, deleniti odit natus incidunt maxime laborum praesentium laudantium eaque facilis, vitae voluptas expedita numquam, iste eius fugiat. Sequi fuga quisquam officiis.</p>
-            </main>
-            <footer>
-              <button class="product__button">Comprar</button>
-            </footer>
-          </article>
-        </div>
-      </section>
-    </main>
-  
-    <footer>
-    </footer>
+      </header>
+      <main>
+        <section class="hero" id="home" tabindex="0">
+          <img src="./assets/images/gatito3.webp" alt="Gato negro 2D con máscara de calavera y gorrito violeta de brujas" class="hero__image">
+          <div class="hero__content">
+            <h1 class="hero__title">Bienvenido a la página de <strong>Gatitos Adorables</strong></h1>
+            <p class="hero__description">Conoce a los personajes gatunos más tiernos y encantadores en su versión <strong>Halloween</strong>. Somos una comunidad amante de los gatos que disfruta compartir historias y aventuras de nuestros amigos felinos, especialmente durante la temporada de Halloween.</p>
+          </div>
+        </section>
+        <section class="characters" id="characters" aria-labelledby="characters-title">
+          <h2 id="characters-title" class="characters__title">Personajes Destacados</h2>
+          <ul class="characters__list" role="list">
+            <li class="characters__item" tabindex="0" role="listitem">
+              <article class="character-card" aria-labelledby="character1-name" aria-describedby="character1-description">
+                <img src="./assets/images/gatito.webp" alt="Gato con disfraz de fantasma" class="character-card__image">
+                <h3 id="character1-name" class="character-card__name">Catsparin</h3>
+                <p id="character1-description" class="character-card__description">Un gato fantasma con un aire misterioso</p>
+              </article>
+            </li>
+            <li class="characters__item" tabindex="0" role="listitem">
+              <article class="character-card" aria-labelledby="character2-name" aria-describedby="character2-description">
+                <img src="./assets/images/gatito2.png" alt="Gatito bebe negro sobre una calabaza con un sombrero de bruja negro sobre su cabeza" class="character-card__image">
+                <h3 id="character2-name" class="character-card__name">Pumpkin</h3>
+                <p id="character2-description" class="character-card__description">Un baby gatito muy curioso, listo para halloween</p>
+              </article>
+            </li>
+            <li class="characters__item" tabindex="0" role="listitem">
+              <article class="character-card" aria-labelledby="character3-name" aria-describedby="character3-description">
+                <img src="./assets/images/gatito4.webp" alt="Gatito negro con capa de vampiro naranja" class="character-card__image">
+                <h3 id="character3-name" class="character-card__name">Count Whiskers</h3>
+                <p id="character3-description" class="character-card__description">Este gato se cree vampiro, pero es adorable</p>
+              </article>
+            </li>
+            <li class="characters__item" tabindex="0" role="listitem">
+              <article class="character-card" aria-labelledby="character4-name" aria-describedby="character4-description">
+                <img src="./assets/images/gatito2.webp" alt="Gatito calavera con capa negra" class="character-card__image">
+                <h3 id="character4-name" class="character-card__name">Midnight</h3>
+                <p id="character4-description" class="character-card__description">Un gato fantasma con aspecto de calavera</p>
+              </article>
+            </li>
+            <li class="characters__item" tabindex="0" role="listitem">
+              <article class="character-card" aria-labelledby="character5-name" aria-describedby="character5-description">
+                <img src="./assets/images/gatito.png" alt="Un gato gris sentado, con un sombrero de brujas sobre su cabeza" class="character-card__image">
+                <h3 id="character5-name" class="character-card__name">Shadow</h3>
+                <p id="character5-description" class="character-card__description">Aventurero y siempre tras un nuevo misterio</p>
+              </article>
+            </li>
+            <li class="characters__item" tabindex="0" role="listitem">
+              <article class="character-card" aria-labelledby="character5-name" aria-describedby="character5-description">
+                <img src="./assets/images/gatito4.png" alt="Perro disfrazado de oso" class="character-card__image">
+                <h3 id="character5-name" class="character-card__name">???????????????</h3>
+                <p id="character5-description" class="character-card__description">Solo lo dejamos pasar</p>
+              </article>
+            </li>
+          </ul>
+        </section>
+      </main>
+      <footer class="footer" id="contact" aria-labelledby="contact-title">
+        <section class="footer__contact">
+          <h2 id="contact-title" class="footer__title">Contacto</h2>
+          <p class="footer__text">Si deseas saber más o unirte a nuestra comunidad de gatos Halloween, contáctanos.</p>
+          <form class="contact-form" aria-labelledby="contact-form-title">
+            <label for="name" class="contact-form__label">Nombre</label>
+            <input type="text" id="name" class="contact-form__input" tabindex="0" aria-required="true" required>
+            <label for="email" class="contact-form__label">Correo electrónico</label>
+            <input type="email" id="email" class="contact-form__input" tabindex="0" aria-required="true" required>
+            <button type="submit" class="contact-form__submit">Enviar</button>
+          </form>
+          <ul class="footer__social">
+            <li class="footer__social-item"><a href="#" class="footer__social-link">Instagram</a></li>
+            <li class="footer__social-item"><a href="#" class="footer__social-link">Facebook</a></li>
+            <li class="footer__social-item"><a href="#" class="footer__social-link">Twitter</a></li>
+          </ul>
+        </section>
+      </footer>
+    </div>
   </body>
 </html>

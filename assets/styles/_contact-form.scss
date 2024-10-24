@@ -1,0 +1,37 @@
+@use '/assets/styles/mixins' as mixins;
+@use '/assets/styles/variables' as variables;
+
+.contact-form {
+    gap: 10px;
+    margin: 20px auto;
+    max-width: 400px;
+    @include mixins.flex-column;
+
+    &__label {
+      color: variables.$color-orange;
+      font-size: variables.$font-size-small;
+      font-weight: variables.$font-weight-bold;
+      text-align: left;
+    }
+  
+    &__input {
+      background: variables.$color-gray;
+      border-radius: 5px;
+      border: none;
+      color: variables.$color-text;
+      padding: 10px;
+    }
+  
+    &__submit {
+      background: variables.$color-orange;
+      border-radius: 5px;
+      border: none;
+      color: variables.$color-dark-purple;
+      cursor: pointer;
+      font-size: variables.$font-size-small;
+      font-weight: variables.$font-weight-bold;
+      padding-block: 20px;
+      padding-inline: 10px;
+    }
+}
+  

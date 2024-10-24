@@ -1,0 +1,22 @@
+@mixin transition($properties...) {
+  transition: $properties 0.3s ease;
+}
+
+@mixin box-shadow($shadow) {
+  box-shadow: $shadow;
+}
+
+@mixin center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin text-shadow($x: 1px, $y: 1px, $blur: 2px, $color: $color-shadow) {
+  text-shadow: $x $y $blur $color;
+}

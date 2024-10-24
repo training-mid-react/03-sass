@@ -1,0 +1,38 @@
+@use '/assets/styles/mixins' as mixins;
+@use '/assets/styles/variables' as variables;
+
+.nav {
+  &__icon {
+    height: 40px;
+    margin-right: 20px;
+    width: 40px;
+  }
+
+  &__list {
+    gap: 20px;
+    list-style: none;
+    padding-block: 10px;
+    @include mixins.center-flex;
+  }
+
+  &__link {
+    border-radius: 20px;
+    color: variables.$color-gold;
+    padding-block: 20px;
+    padding-inline: 10px;
+    text-decoration: none;
+    @include mixins.transition(all);
+
+    &:hover,
+    &:focus {
+      color: variables.$color-white;
+      font-weight: variables.$font-weight-bold;
+      outline: none;
+    }
+
+    @media (width <= variables.$bkp-tablet) {
+      font-size: variables.$font-size-small;
+      padding: 2px;
+    }
+  }
+}

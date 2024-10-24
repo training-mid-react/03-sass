@@ -1,0 +1,41 @@
+@use '/assets/styles/mixins' as mixins;
+@use '/assets/styles/variables' as variables;
+
+.footer {
+    padding: 20px;
+    text-align: center;
+    background-color: variables.$color-purple;
+
+    &__title {
+      color: variables.$color-orange;
+      font-size: variables.$font-size-xlarge;
+      @include mixins.text-shadow(2px, 2px, 4px, variables.$color-shadow);
+
+      @media (width <= variables.$bkp-tablet) {
+        font-size: variables.$font-size-large;
+      }
+    }
+  
+    &__text {
+      font-size: variables.$font-size-small;
+      margin: 10px 0;
+    }
+  
+    &__social {
+      gap: 15px;
+      list-style-type: none;
+      padding-block: 20px;
+      @include mixins.center-flex;
+
+      a {
+        color: variables.$color-orange;
+        text-decoration: none;
+  
+        &:hover {
+          color: variables.$color-text;
+          font-weight: variables.$font-weight-bold;
+        }
+      }
+    }
+  }
+  

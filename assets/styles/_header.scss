@@ -1,0 +1,19 @@
+@use '/assets/styles/mixins' as mixins;
+@use '/assets/styles/variables' as variables;
+
+.header {
+    background-color: variables.$color-purple;
+    padding-block: 15px;
+    padding-inline: 20px;
+    position: sticky;
+    justify-content: space-between;
+    @include mixins.center-flex;
+
+    top: 0;
+    z-index: 1;
+
+    &::after {
+      background-color: variables.$color-orange;
+    }
+  }
+  
