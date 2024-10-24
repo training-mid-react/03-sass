@@ -1,0 +1,69 @@
+@use "./variables" as var;
+@use "./shared" as shared;
+
+.properties {
+  padding: 2rem 0;
+  text-align: center;
+  @include shared.margin-bottom;
+  @include shared.container;
+  & h2 {
+    font-size: 1rem;
+  }
+
+  &__phrase {
+    font-size: 3rem;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    justify-content: center;
+    margin: 2rem;
+
+    @media (width <= var.$bkp-lg) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (width <= var.$bkp-md) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__item {
+    display: grid;
+    border-radius: 6px;
+    @include shared.shadow(var.$sadow-color-secondary);
+    position: relative;
+    &:hover {
+      scale: 1.1;
+      transition: scale 0.5s linear;
+      @include shared.shadow(var.$sadow-color-primary);
+    }
+
+    ul {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      li {
+        list-style: none;
+        text-align: center;
+      }
+    }
+    h3 {
+      background-color: rgba(255, 255, 255, 0.518);
+      width: fit-content;
+      min-width: 80%;
+      padding: 0.5rem;
+      position: absolute;
+    }
+  }
+
+  &__img {
+    width: fit-content;
+    max-width: 100%;
+  }
+
+  &__details {
+    padding: 1rem 1.5rem 1.5rem 1.5rem;
+  }
+}

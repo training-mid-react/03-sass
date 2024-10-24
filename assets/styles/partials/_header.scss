@@ -1,0 +1,62 @@
+@use "./variables" as var;
+@use "./shared" as shared;
+
+.header {
+  padding: 2rem 30px;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  background-color: var.$bg-color-white;
+  z-index: 3;
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  @media (width <= var.$bkp-sm) {
+    display: block;
+    font-size: 1rem;
+    line-height: 2.8rem;
+  }
+
+  &__logo--first-letter-bg {
+    color: var.$text-color-secondary;
+    font-size: 2rem;
+    background-color: var.$bg-color-primary;
+    padding: 1rem;
+    border-radius: 4px;
+  }
+
+  &__nav {
+    display: flex;
+    justify-items: center;
+
+    @media (width <= var.$bkp-md) {
+      display: none;
+    }
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    list-style: none;
+    align-items: center;
+  }
+
+  &__list-item {
+    text-decoration: none;
+
+    & a {
+      cursor: pointer;
+      text-decoration: none;
+      color: var.$text-color-primary;
+
+      &:hover {
+        font-weight: bold;
+        @include shared.border-bottom;
+      }
+    }
+  }
+}

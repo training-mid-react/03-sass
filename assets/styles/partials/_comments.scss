@@ -1,0 +1,40 @@
+@use "./variables" as var;
+@use "./shared" as shared;
+
+.comments {
+  gap: 1rem;
+  @include shared.margin-bottom;
+  @include shared.container;
+
+  & h2 {
+    text-align: center;
+    margin: 0 auto 2rem auto;
+    @include shared.border-bottom;
+  }
+
+  &__articles {
+    display: flex;
+    @media (width <= var.$bkp-md) {
+      display: block;
+    }
+  }
+
+  &__article {
+    padding: 1rem;
+    margin: 1rem;
+    background-color: var.$bg-color-secondary;
+    line-height: 2rem;
+    @include shared.shadow(var.$sadow-color-primary);
+
+    h3 {
+      padding-top: 1rem;
+      text-align: end;
+    }
+  }
+
+  &__blockquote--quote {
+    font-size: 3rem;
+    font-style: italic;
+    color: var.$bg-color-primary;
+  }
+}
