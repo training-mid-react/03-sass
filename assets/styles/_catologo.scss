@@ -1,0 +1,18 @@
+@use 'shared' as shared;
+@use 'carousel';
+
+.catalogo {
+    @include shared.container;
+
+    padding-top: 73px;
+    height: 100dvh;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    place-items: center center;
+    background-image: shared.$COLOR-BG-SECTION;
+
+    &__title {
+        padding-inline: 20px;
+        place-self: start;
+    }
+}

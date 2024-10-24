@@ -1,0 +1,76 @@
+@use 'shared' as shared;
+
+
+.contacto {
+    @include shared.container;
+
+    height: 100dvh;
+    padding-top: 73px;
+    display: grid;
+    grid-template-rows: auto auto;
+    place-items: center center;
+    background-image: shared.$COLOR-BG-SECTION;
+    padding-inline: 20px;
+
+    &__title {
+        font-size: 2em;
+        margin-bottom: 10px;
+        color: shared.$COLOR-TEXT-PRIMARY;
+    }
+
+    &__description {
+        font-size: 1.2em;
+        color: #666;
+        margin-bottom: 20px;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__fieldset {
+        border: none;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    &__label {
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    &__input,
+    &__textarea {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 1em;
+        margin-bottom: 15px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    &__input:focus,
+    &__textarea:focus {
+        outline: none;
+    }
+
+    &__submit {
+        display: inline-block;
+        width: 50%;
+        margin-inline: auto;
+        padding: 10px 15px;
+        background-color: shared.$COLOR-BUTTON-PRIMARY;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+            background-color: shared.$COLOR-BUTTON-PRIMARY-HOVER;
+        }
+    }
+
+}

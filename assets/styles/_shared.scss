@@ -1,16 +1,32 @@
-$bkp-mobile: 500px;
+// ==> Variables
 
+// Break points
+$break-mobile: 700px;
+
+// colors
+$COLOR-BG-MAIN: rgb(188, 242, 26);
+$COLOR-TEXT-PRIMARY: #1f1f1f;
+$COLOR-TEXT-GRAY: rgb(150, 150, 150);
+$COLOR-BG-SECTION: linear-gradient(to bottom, rgb(243, 243, 243) 10%,
+    rgba(199, 214, 151, 0.449) 60%,
+    rgb(101, 165, 95) 100%);
+
+$COLOR-BUTTON-PRIMARY: #000000;
+$COLOR-BUTTON-PRIMARY-HOVER: #333333;
+
+// ==> Class
+.link--no-underline {
+  text-decoration: none;
+}
+
+.text--section {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+
+// ==> Sass Proferties
 @mixin container {
   max-width: 1366px;
   margin-inline: auto;
-}
-
-@mixin container-flex($justify: start) {
-  display: flex;
-  align-items: center;
-  justify-content: $justify;
-}
-
-@function px-to-rem($px, $base: 16) {
-  @return $px / $base  * 1rem;
 }

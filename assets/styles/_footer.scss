@@ -1,0 +1,18 @@
+@use 'shared' as shared;
+
+.footer {
+    @include shared.container;
+
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    font-size: 1em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+
+    &__text {
+        margin: 0;
+    }
+}

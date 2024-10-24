@@ -1,0 +1,105 @@
+@use 'shared' as shared;
+
+.carousel {
+    position: relative;
+    width: 80%;
+    height: 70dvh;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    background-color: rgba(243, 243, 243, 0.425);
+
+    &__slides {
+        display: flex;
+        transition: transform 0.5s ease;
+        padding-top: 40px;
+    }
+
+    &__slide {
+        min-width: 100%;
+        display: flex;
+        padding-inline: 50px;
+
+        @media (width <=shared.$break-mobile) {
+            flex-direction: row;
+            align-items: center;
+        }
+
+    }
+
+    &__image {
+        object-fit: contain;
+        padding-inline: 50px;
+
+        @media (width<=shared.$break-mobile) {
+            width: 70%;
+            order: 2;
+
+        }
+    }
+
+    &__title {
+        font-size: 1.5em;
+
+        @media (width<=shared.$break-mobile) {
+            order: 1;
+        }
+    }
+
+    &__description {
+        color: #555;
+        max-width: 50%;
+        text-align: justify;
+
+        @media (width<=shared.$break-mobile) {
+            display: none;
+        }
+    }
+
+    &__button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(255, 255, 255, 0.7);
+        border: none;
+        cursor: pointer;
+        font-size: 2em;
+        padding: 10px;
+        border-radius: 50px;
+
+        &--left {
+            z-index: 10;
+            left: 10px;
+        }
+
+        &--right {
+            z-index: 10;
+            right: 10px;
+        }
+
+        &--left:hover,
+        &--right:hover {
+            background-color: #666565;
+            color: #ebebeb;
+        }
+
+        @media (width<=shared.$break-mobile) {
+            order: 3;
+        }
+    }
+
+    &__button-action {
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: shared.$COLOR-BUTTON-PRIMARY;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    &__button-action:hover {
+        background-color: shared.$COLOR-BUTTON-PRIMARY-HOVER;
+    }
+
+}
