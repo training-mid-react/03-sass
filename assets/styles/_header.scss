@@ -27,7 +27,8 @@
     color: vars.$color-text-secondary;
     text-decoration: none;
     font-weight: bold;
-    @include mix.transition(color);
+    transition: color 0.3s ease-in-out;
+    // @include mix.transition(color);
 
     &:hover,
     &:focus {
