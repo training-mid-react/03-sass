@@ -1,111 +1,135 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Producto X">
+    <meta name="description" content="Descubre cómo Producto X puede mejorar tu vida de manera significativa.">
+    <meta name="keywords" content="Producto X, mejora, innovación, eficiencia">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Producto X - Mejora Tu Vida Hoy">
+    <meta property="og:description" content="Descubre cómo Producto X puede mejorar tu vida de manera significativa.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.productox.com/">
+    <meta property="og:image" content="https://www.productox.com/imagen.jpg">
+    <title>Producto X - Mejora Tu Vida Hoy</title>
     <link rel="stylesheet" href="./assets/styles/index.scss">
-  </head>
-  <body>
-    <!-- BLOQUE/BLOCK -->
+</head>
+<body>
     <header class="header">
-      <div class="header__wrapper">
-        <h2 class="header__logo">Logo</h2>
-  
-        <nav class="header__nav">
-          <ul class="header__list">
-            <li class="header__item header__item--active">Home</li>
-            <li class="header__item">Section</li>
-            <li class="header__item">Section</li>
-            <li class="header__item">Section</li>
-            <li class="header__item">Section</li>
-          </ul>
+        <nav class="header__nav" aria-label="Menú principal">
+            <ul class="header__list">
+                <li class="header__item"><a class="header__link" href="#inicio" tabindex="0">Inicio</a></li>
+                <li class="header__item"><a class="header__link" href="#beneficios" tabindex="0">Beneficios</a></li>
+                <li class="header__item"><a class="header__link" href="#testimonios" tabindex="0">Testimonios</a></li>
+                <li class="header__item"><a class="header__link" href="#contacto" tabindex="0">Contacto</a></li>
+            </ul>
         </nav>
-      </div>
     </header>
-  
-    <main>
-      <section class="banner" role="banner">
-        <article>
-          <h1 class="banner__title">Bienvenido a esta clase de CSS</h1>
-          <p class="banner__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quisquam, voluptas libero tempore obcaecati possimus architecto labore consequuntur praesentium ipsa iure tempora fugiat, ea sapiente? Autem ipsam quibusdam odio provident.</p>
-          <button class="banner__button">Comenzar</button>
-        </article>
-  
-        <figure class="banner__figure">
-          <img class="banner__image" src="./banner-img.webp" alt="Carretera nevada con postes de energia y personas caminando">
-        </figure>
-      </section>
-  
-      <section class="products">
-        <h2 class="products__title">Products</h2>
-  
-        <div class="products__container">
-          <article class="product">
-            <header>
-              <figure class="product__figure">
-                <img class="product__image" src="./banner-img.webp" alt="Carretera nevada con postes de energia y personas caminando">
-              </figure>
-            </header>
-            <main>
-              <h3 class="product__title">CSS</h3>
-              <p class="product__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, deleniti odit natus incidunt maxime laborum praesentium laudantium eaque facilis, vitae voluptas expedita numquam, iste eius fugiat. Sequi fuga quisquam officiis.</p>
-            </main>
-            <footer>
-              <button class="product__button">Comprar</button>
-            </footer>
-          </article>
-  
-          <article class="product">
-            <header>
-              <figure class="product__figure">
-                <img class="product__image" src="./banner-img.webp" alt="Carretera nevada con postes de energia y personas caminando">
-              </figure>
-            </header>
-            <main>
-              <h3 class="product__title">CSS</h3>
-              <p class="product__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, deleniti odit natus incidunt maxime laborum praesentium laudantium eaque facilis, vitae voluptas expedita numquam, iste eius fugiat. Sequi fuga quisquam officiis.</p>
-            </main>
-            <footer>
-              <button class="product__button">Comprar</button>
-            </footer>
-          </article>
-  
-          <article class="product">
-            <header>
-              <figure class="product__figure">
-                <img class="product__image" src="./banner-img.webp" alt="Carretera nevada con postes de energia y personas caminando">
-              </figure>
-            </header>
-            <main>
-              <h3 class="product__title">CSS</h3>
-              <p class="product__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, deleniti odit natus incidunt maxime laborum praesentium laudantium eaque facilis, vitae voluptas expedita numquam, iste eius fugiat. Sequi fuga quisquam officiis.</p>
-            </main>
-            <footer>
-              <button class="product__button">Comprar</button>
-            </footer>
-          </article>
-  
-          <article class="product">
-            <header>
-              <figure class="product__figure">
-                <img class="product__image" src="./banner-img.webp" alt="Carretera nevada con postes de energia y personas caminando">
-              </figure>
-            </header>
-            <main>
-              <h3 class="product__title">CSS</h3>
-              <p class="product__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, deleniti odit natus incidunt maxime laborum praesentium laudantium eaque facilis, vitae voluptas expedita numquam, iste eius fugiat. Sequi fuga quisquam officiis.</p>
-            </main>
-            <footer>
-              <button class="product__button">Comprar</button>
-            </footer>
-          </article>
-        </div>
-      </section>
+
+    <main class="main">
+        <section id="inicio" class="hero">
+            <h1 class="hero__title">Bienvenido a Producto X</h1>
+            <p class="hero__description">Producto X es la solución definitiva para mejorar tu calidad de vida.</p>
+            <figure class="hero__figure">
+                <img class="hero__image" src="./hero.webp" alt="Personas caminando hacia una escalera iluminada que atraviesa una estructura con forma de X">
+            </figure>
+            <a href="#contacto" class="hero__cta" tabindex="0">¡Empieza Ahora!</a>
+        </section>
+        
+        <section id="beneficios" class="benefits">
+            <h2 class="benefits__title">¿Por Qué Elegir Producto X?</h2>
+            <div class="benefits__list">
+                <article class="benefits__item">
+                    <h3 class="benefits__item-title">Innovación</h3>
+                    <p class="benefits__item-description">Nuestro producto utiliza la última tecnología para ofrecer resultados excepcionales.</p>
+                </article>
+                <article class="benefits__item">
+                    <h3 class="benefits__item-title">Eficiencia</h3>
+                    <p class="benefits__item-description">Obtén más en menos tiempo con nuestras soluciones optimizadas.</p>
+                </article>
+                <article class="benefits__item">
+                    <h3 class="benefits__item-title">Soporte 24/7</h3>
+                    <p class="benefits__item-description">Estamos aquí para ayudarte en cualquier momento, en cualquier lugar.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="testimonios" class="testimonials" aria-label="Testimonios de clientes">
+            <h2 class="testimonials__title">Lo Que Dicen Nuestros Clientes</h2>
+            <blockquote class="testimonials__testimonial">
+                <p class="testimonials__testimonial-text">"Producto X cambió mi vida para mejor. Altamente recomendado."</p>
+                <footer class="testimonials__testimonial-footer">- Ana López</footer>
+            </blockquote>
+            <blockquote class="testimonials__testimonial">
+                <p class="testimonials__testimonial-text">"No puedo imaginar mi vida sin Producto X. Es simplemente increíble."</p>
+                <footer class="testimonials__testimonial-footer">- Carlos Martínez</footer>
+            </blockquote>
+        </section>
+
+        <aside class="sidebar" aria-labelledby="noticias-titulo">
+            <h2 id="noticias-titulo" class="sidebar__title">Noticias Recientes</h2>
+            <p class="sidebar__description">Mantente al día con las últimas actualizaciones sobre Producto X y su impacto en la industria.</p>
+            <ul class="sidebar__list">
+                <li class="sidebar__item"><a class="sidebar__link" href="#" tabindex="0">Artículo 1: Innovaciones de Producto X</a></li>
+                <li class="sidebar__item"><a class="sidebar__link" href="#" tabindex="0">Artículo 2: Cómo Producto X está cambiando vidas</a></li>
+                <li class="sidebar__item"><a class="sidebar__link" href="#" tabindex="0">Artículo 3: El futuro de Producto X en el mercado</a></li>
+                <li class="sidebar__item"><a class="sidebar__link" href="#" tabindex="0">Artículo 4: Entrevista con el CEO de Producto X</a></li>
+                <li class="sidebar__item"><a class="sidebar__link" href="#" tabindex="0">Artículo 5: Casos de éxito con Producto X</a></li>
+                <li class="sidebar__item"><a class="sidebar__link" href="#" tabindex="0">Artículo 6: Cómo maximizar los beneficios de Producto X</a></li>
+            </ul>
+        </aside>
+
+        <section id="contacto" class="contact" aria-labelledby="contacto-titulo">
+            <h2 id="contacto-titulo" class="contact__title">Contáctanos</h2>
+            <form action="#" method="post" class="contact__form">
+                <fieldset class="contact__fieldset">
+                    <label for="nombre" class="contact__label">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" class="contact__input" required aria-required="true">
+                
+                    <label for="correo" class="contact__label">Correo Electrónico:</label>
+                    <input type="email" id="correo" name="correo" class="contact__input" required aria-required="true">
+                </fieldset>
+
+                <fieldset class="contact__fieldset">
+                    <label for="mensaje" class="contact__label">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" class="contact__textarea" rows="5" required aria-required="true"></textarea>
+                </fieldset>
+
+                <button type="submit" class="contact__button">Enviar Mensaje</button>
+            </form>
+        </section>
     </main>
-  
-    <footer>
+
+    <footer class="footer" role="contentinfo">
+        <nav class="footer__nav" aria-label="Enlaces del footer">
+            <ul class="footer__nav-list">
+                <li class="footer__nav-item"><a class="footer__nav-link" href="#inicio" tabindex="0">Inicio</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="#beneficios" tabindex="0">Beneficios</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="#testimonios" tabindex="0">Testimonios</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="#contacto" tabindex="0">Contacto</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="/privacidad.html" tabindex="0">Política de Privacidad</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="/terminos.html" tabindex="0">Términos de Servicio</a></li>
+            </ul>
+        </nav>
+
+        <div class="footer__social">
+            <h2 id="redes-sociales" class="footer__social-title">Síguenos</h2>
+            <ul class="footer__social-list">
+                <li class="footer__social-item"><a class="footer__social-link" href="https://www.facebook.com/productox" target="_blank" rel="noopener" aria-label="Facebook" tabindex="0">Facebook</a></li>
+                <li class="footer__social-item"><a class="footer__social-link" href="https://www.twitter.com/productox" target="_blank" rel="noopener" aria-label="Twitter" tabindex="0">Twitter</a></li>
+                <li class="footer__social-item"><a class="footer__social-link" href="https://www.instagram.com/productox" target="_blank" rel="noopener" aria-label="Instagram" tabindex="0">Instagram</a></li>
+                <li class="footer__social-item"><a class="footer__social-link" href="https://www.linkedin.com/company/productox" target="_blank" rel="noopener" aria-label="LinkedIn" tabindex="0">LinkedIn</a></li>
+            </ul>
+        </div>
+
+        <div class="footer__info">
+            <p class="footer__policy">
+                <a href="/privacidad.html" class="footer__policy-link" tabindex="0">Política de Privacidad</a> | 
+                <a href="/terminos.html" class="footer__policy-link" tabindex="0">Términos de Servicio</a>
+            </p>
+            <p class="footer__copyright">&copy; 2024 Producto X. Todos los derechos reservados.</p>
+        </div>
     </footer>
-  </body>
+</body>
 </html>
