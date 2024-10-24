@@ -1,0 +1,16 @@
+@use "./variables" as var;
+
+.footer {
+  background-color: var.$bg-color-black;
+  color: var.$text-color-secondary;
+
+  &__content {
+    padding: 5rem 0;
+    display: flex;
+    justify-content: space-around;
+
+    @media (width <= var.$bkp-md) {
+      display: block;
+    }
+  }
+}

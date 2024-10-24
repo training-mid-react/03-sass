@@ -1,0 +1,37 @@
+@use "./variables" as var;
+@use "./shared" as shared;
+
+$main-banner-image: "/assets/img/home-banner.webp";
+
+.home {
+  color: var.$text-color-secondary;
+  // TODO: Ver porque no importa la imagen
+  // @include shared.background-image($main-banner-image);
+  background-image: url("/assets/img/home-banner.webp");
+  @include shared.margin-bottom;
+
+  @media (width <= var.$bkp-md) {
+    background-image: none;
+  }
+
+  @media (width <= var.$bkp-sm) {
+    background-image: none;
+  }
+
+  &__div > * {
+    background-color: var.$bg-color-primary;
+    margin: 1rem auto;
+    width: fit-content;
+    cursor: default;
+    padding: 0.3rem;
+    border-radius: 0.2rem;
+    color: var.$text-color-secondary;
+    text-align: center;
+    &:first-child {
+      font-size: 3rem;
+      @media (width <= var.$bkp-sm) {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,111 +1,237 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
-    <link rel="stylesheet" href="./assets/styles/index.scss">
+    <link rel="stylesheet" href="assets/styles/index.scss" />
   </head>
-  <body>
-    <!-- BLOQUE/BLOCK -->
+  <body class="html">
     <header class="header">
-      <div class="header__wrapper">
-        <h2 class="header__logo">Logo</h2>
-  
-        <nav class="header__nav">
-          <ul class="header__list">
-            <li class="header__item header__item--active">Home</li>
-            <li class="header__item">Section</li>
-            <li class="header__item">Section</li>
-            <li class="header__item">Section</li>
-            <li class="header__item">Section</li>
-          </ul>
-        </nav>
-      </div>
+      <h2 class="header__logo">
+        <span class="header__logo--first-letter-bg">O</span>piniones de
+        Apartamentos
+      </h2>
+      <nav aria-label="Navegación principal" class="header__nav">
+        <ul class="header__list">
+          <li class="header__list-item"><a href="#inicio">Inicio</a></li>
+          <li class="header__list-item">
+            <a href="#properties">Apartamentos</a>
+          </li>
+          <li class="header__list-item"><a href="#comments">Reseñas</a></li>
+          <li class="header__list-item"><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
     </header>
-  
+
     <main>
-      <section class="banner" role="banner">
-        <article>
-          <h1 class="banner__title">Bienvenido a esta clase de CSS</h1>
-          <p class="banner__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quisquam, voluptas libero tempore obcaecati possimus architecto labore consequuntur praesentium ipsa iure tempora fugiat, ea sapiente? Autem ipsam quibusdam odio provident.</p>
-          <button class="banner__button">Comenzar</button>
-        </article>
-  
-        <figure class="banner__figure">
-          <img class="banner__image" src="./banner-img.webp" alt="Carretera nevada con postes de energia y personas caminando">
-        </figure>
+      <section id="inicio" class="home">
+        <div class="home__div">
+          <h2>Bienvenido</h2>
+          <p>
+            Comparte tus experiencias y recomendaciones sobre apartamentos y
+            alquileres.
+          </p>
+        </div>
       </section>
-  
-      <section class="products">
-        <h2 class="products__title">Products</h2>
-  
-        <div class="products__container">
-          <article class="product">
-            <header>
-              <figure class="product__figure">
-                <img class="product__image" src="./banner-img.webp" alt="Carretera nevada con postes de energia y personas caminando">
-              </figure>
-            </header>
-            <main>
-              <h3 class="product__title">CSS</h3>
-              <p class="product__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, deleniti odit natus incidunt maxime laborum praesentium laudantium eaque facilis, vitae voluptas expedita numquam, iste eius fugiat. Sequi fuga quisquam officiis.</p>
-            </main>
-            <footer>
-              <button class="product__button">Comprar</button>
-            </footer>
+
+      <section id="properties" class="properties">
+        <h2>Propiedades</h2>
+        <p class="properties__phrase">Te ayudamos a hacer mejores negocios</p>
+        <div class="properties__items">
+          <article class="properties__item">
+            <figure>
+              <img
+                class="properties__img"
+                src="./assets/img/modern-villa-exterior-in-summer.webp"
+                alt="Ilustreacion de una casa en la playa, vista de la fachada"
+              />
+            </figure>
+            <h3>Apartamento en el Centro</h3>
+            <div class="properties__details">
+              <blockquote>
+                "Un apartamento moderno con todas las comodidades."
+              </blockquote>
+              <ul>
+                <li>Centro de la ciudad</li>
+                <li>$1200/mes</li>
+                <li>8 cuartos</li>
+                <li>2 cocinas</li>
+                <li>3 baños</li>
+                <li>6200 m2</li>
+              </ul>
+            </div>
           </article>
-  
-          <article class="product">
-            <header>
-              <figure class="product__figure">
-                <img class="product__image" src="./banner-img.webp" alt="Carretera nevada con postes de energia y personas caminando">
-              </figure>
-            </header>
-            <main>
-              <h3 class="product__title">CSS</h3>
-              <p class="product__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, deleniti odit natus incidunt maxime laborum praesentium laudantium eaque facilis, vitae voluptas expedita numquam, iste eius fugiat. Sequi fuga quisquam officiis.</p>
-            </main>
-            <footer>
-              <button class="product__button">Comprar</button>
-            </footer>
+          <article class="properties__item">
+            <figure>
+              <img
+                class="properties__img"
+                src="./assets/img/modern-villa-exterior-in-summer.webp"
+                alt="Ilustreacion de una casa en la playa, vista de la fachada"
+              />
+            </figure>
+            <h3>Apartamento en la Playa</h3>
+            <div class="properties__details">
+              <blockquote>
+                "Vistas al mar y acceso directo a la playa."
+              </blockquote>
+              <ul>
+                <li>Playa del Sol</li>
+                <li>$1500/mes</li>
+                <li>8 cuartos</li>
+                <li>2 cocinas</li>
+                <li>3 baños</li>
+                <li>6200 m2</li>
+              </ul>
+            </div>
           </article>
-  
-          <article class="product">
-            <header>
-              <figure class="product__figure">
-                <img class="product__image" src="./banner-img.webp" alt="Carretera nevada con postes de energia y personas caminando">
-              </figure>
-            </header>
-            <main>
-              <h3 class="product__title">CSS</h3>
-              <p class="product__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, deleniti odit natus incidunt maxime laborum praesentium laudantium eaque facilis, vitae voluptas expedita numquam, iste eius fugiat. Sequi fuga quisquam officiis.</p>
-            </main>
-            <footer>
-              <button class="product__button">Comprar</button>
-            </footer>
-          </article>
-  
-          <article class="product">
-            <header>
-              <figure class="product__figure">
-                <img class="product__image" src="./banner-img.webp" alt="Carretera nevada con postes de energia y personas caminando">
-              </figure>
-            </header>
-            <main>
-              <h3 class="product__title">CSS</h3>
-              <p class="product__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, deleniti odit natus incidunt maxime laborum praesentium laudantium eaque facilis, vitae voluptas expedita numquam, iste eius fugiat. Sequi fuga quisquam officiis.</p>
-            </main>
-            <footer>
-              <button class="product__button">Comprar</button>
-            </footer>
+          <article class="properties__item">
+            <figure>
+              <img
+                class="properties__img"
+                src="./assets/img/Building-contrast-2.webp"
+                alt="Ilustreacion de una casa en el campo, vista de la fachada"
+              />
+            </figure>
+            <h3>Casa en el campo</h3>
+            <div class="properties__details">
+              <blockquote>
+                "Vistas al horizonte y acceso directo a la montaña."
+              </blockquote>
+              <ul>
+                <li>Lomas de solymar</li>
+                <li>$1500/mes</li>
+                <li>8 cuartos</li>
+                <li>2 cocinas</li>
+                <li>3 baños</li>
+                <li>6200 m2</li>
+              </ul>
+            </div>
           </article>
         </div>
       </section>
+
+      <section id="comments" class="comments">
+        <h2>Reseñas de nuestros usuarios</h2>
+        <div class="comments__articles">
+          <article class="comments__article">
+            <blockquote>
+              <span class="comments__blockquote--quote">"</span>
+              El apartamento en el centro es excelente,
+              <strong>muy bien ubicado</strong> y con todas las
+              comodidades.<span class="comments__blockquote--quote">"</span>
+            </blockquote>
+            <h3>Juan Pérez</h3>
+          </article>
+          <article class="comments__article">
+            <blockquote>
+              <span class="comments__blockquote--quote">"</span>
+              La vista del apartamento en la playa es espectacular. Recomiendo
+              totalmente! <span class="comments__blockquote--quote">"</span>
+            </blockquote>
+            <h3>María Gómez</h3>
+          </article>
+        </div>
+      </section>
+
+      <section id="contacto" class="contact">
+        <h2 class="contact__title">Contacto</h2>
+        <p class="contact__description">
+          Envía tus consultas o sugerencias utilizando el siguiente formulario:
+        </p>
+        <form action="/enviar" method="post" class="contact__form">
+          <fieldset class="contact__fieldset">
+            <legend class="contact__legend">Formulario de contacto</legend>
+            <label class="contact__label" for="nombre"
+              >Escribe tu nombre:</label
+            >
+            <input
+              class="contact__input"
+              type="text"
+              id="nombre"
+              name="nombre"
+              required
+              aria-required="true"
+              placeholder="Tu nombre"
+            />
+
+            <label class="contact__label" for="email"
+              >Escribe tu correo electrónico:</label
+            >
+            <input
+              class="contact__input"
+              type="email"
+              id="email"
+              name="email"
+              required
+              aria-required="true"
+              placeholder="tu@email.com"
+            />
+
+            <label class="contact__label" for="mensaje">Mensaje:</label>
+            <textarea
+              class="contact__textarea"
+              id="mensaje"
+              name="mensaje"
+              required
+              aria-required="true"
+              placeholder="Tu mensaje aquí..."
+            ></textarea>
+
+            <button
+              class="contact__button"
+              aria-label="Enviar mi mensaje"
+              aria-describedby="descripcion-boton"
+            >
+              Enviar
+            </button>
+            <span
+              id="descripcion-boton"
+              class="contact__description-button"
+              style="display: none"
+            >
+              Este botón enviará tus datos del formulario.
+            </span>
+          </fieldset>
+        </form>
+      </section>
     </main>
-  
-    <footer>
+
+    <footer class="footer">
+      <div class="footer__content">
+        <h2>Contáctanos</h2>
+        <address>
+          <p>
+            Correo:
+            <a href="mailto:info@opinionesapartamentos.com"
+              >info@opinionesapartamentos.com</a
+            >
+          </p>
+          <p>Teléfono: <a href="tel:+123456789">+1 234 567 89</a></p>
+          <p>
+            Síguenos en
+            <a
+              href="https://twitter.com/opiniones"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Twitter</a
+            >
+            <a
+              href="https://twitter.com/opiniones"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Facebook</a
+            >
+            <a
+              href="https://twitter.com/opiniones"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Instagram</a
+            >
+          </p>
+        </address>
+      </div>
     </footer>
   </body>
 </html>
