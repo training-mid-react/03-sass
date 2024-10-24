@@ -1,6 +1,8 @@
 @use 'shared' as shared;
 
 .footer {
+    @include shared.container;
+
     padding: 20px;
     background-color: #333;
     color: #fff;
@@ -9,8 +11,6 @@
     position: relative;
     bottom: 0;
     width: 100%;
-    @include shared.container;
-
 
     &__text {
         margin: 0;
