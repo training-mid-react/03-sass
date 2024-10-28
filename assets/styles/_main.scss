@@ -1,0 +1,262 @@
+@use "sass:color";
+@use "variables" as vars;
+@use "mixins" as mix;
+@use "shared" as shared;
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  grid-template-areas:
+    "hero hero hero"
+    "sidebar benefits testimonials"
+    "sidebar contact contact";
+  max-width: vars.$max-width;
+  margin: 2rem auto;
+  padding: 0 vars.$padding;
+  gap: 2rem;
+
+  @include mix.respond-to(medium) {
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas:
+      "hero hero"
+      "sidebar benefits"
+      "sidebar testimonials"
+      "sidebar contact";
+    gap: 1rem;
+  }
+
+  @include mix.respond-to(small) {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .hero,
+  .benefits,
+  .testimonials,
+  .contact {
+    background-color: vars.$color-bg;
+    padding: vars.$padding;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .hero {
+    grid-area: hero;
+    text-align: center;
+    background-color: vars.$color-primary;
+    color: vars.$color-text-secondary;
+    max-height: calc(100dvh - 100px);
+
+    @include mix.respond-to(small) {
+      height: calc(100dvh - 220px);
+    }
+
+    &__title {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    &__description {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    &__figure {
+      height: 70%;
+      margin-bottom: 2rem;
+
+      @include mix.respond-to(small) {
+        height: 50%;
+      }
+    }
+
+    &__image {
+      height: 100%;
+      width: auto;
+      border-radius: 8px;
+    }
+
+    &__cta {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background-color: vars.$color-accent;
+      color: vars.$color-text-secondary;
+      text-decoration: none;
+      border-radius: 8px;
+      border: 2px solid vars.$color-accent;
+      transition: border-color 0.3s ease, background-color 0.3s ease;
+
+      &:hover,
+      &:focus {
+        background-color: color.adjust(vars.$color-accent, $lightness: -10%);
+        border-color: vars.$color-bg;
+      }
+    }
+  }
+
+  .sidebar {
+    grid-area: sidebar;
+    background-color: vars.$color-bg;
+    padding: vars.$padding;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    &__title {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: vars.$color-primary;
+    }
+
+    &__description {
+      margin-bottom: 1rem;
+    }
+
+    &__list {
+      list-style: none;
+    }
+
+    &__item + .sidebar__item {
+      margin-top: 0.5rem;
+    }
+
+    &__link {
+      color: vars.$color-accent;
+      text-decoration: none;
+      transition: color 0.3s ease;
+
+      &:hover,
+      &:focus {
+        color: vars.$color-primary;
+      }
+    }
+  }
+
+  .benefits {
+    grid-area: benefits;
+
+    &__title {
+      @extend %section-title;
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+
+      @include mix.respond-to(medium) {
+        flex-direction: row;
+      }
+
+      @include mix.respond-to(small) {
+        flex-direction: column;
+      }
+    }
+
+    &__item {
+      flex: 1;
+      padding: vars.$padding;
+      background-color: vars.$color-secondary;
+      border-radius: 8px;
+      text-align: center;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+
+      &:hover,
+      &:focus-within {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+    }
+
+    &__item-title {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: vars.$color-primary;
+    }
+
+    &__item-description {
+      font-size: 1rem;
+      color: vars.$color-text;
+    }
+  }
+
+  .testimonials {
+    grid-area: testimonials;
+
+    &__title {
+      @extend %section-title;
+      margin-bottom: 1.5rem;
+    }
+
+    &__testimonial {
+      margin-bottom: 1.5rem;
+      padding: vars.$padding;
+      background-color: vars.$color-secondary;
+      border-left: 4px solid vars.$color-accent;
+      border-radius: 4px;
+    }
+
+    &__testimonial-text {
+      font-style: italic;
+      margin-bottom: 0.5rem;
+    }
+
+    &__testimonial-footer {
+      text-align: right;
+      font-weight: bold;
+      color: vars.$color-primary;
+    }
+  }
+
+  .contact {
+    grid-area: contact;
+
+    &__title {
+      @extend %section-title;
+    }
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    &__fieldset {
+      border: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    &__label {
+      font-weight: bold;
+    }
+
+    &__input,
+    &__textarea {
+      padding: 0.5rem;
+      border: 1px solid #cccccc;
+      border-radius: 4px;
+      font-size: 1rem;
+      width: 100%;
+    }
+
+    &__button {
+      padding: 0.75rem;
+      background-color: vars.$color-accent;
+      color: vars.$color-text-secondary;
+      border: 1px solid vars.$color-accent;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+
+      &:hover,
+      &:focus {
+        background-color: color.adjust(vars.$color-accent, $lightness: -10%);
+        border-color: vars.$color-accent;
+        color: vars.$color-accent;
+      }
+    }
+  }
+}
